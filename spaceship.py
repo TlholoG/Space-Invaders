@@ -1,21 +1,15 @@
 from turtle import Turtle
 
-
 class Spaceship(Turtle):
-    def __init__(self, position):
+    def __init__(self):
         super().__init__()
-        self.shape("square")
-        self.color("white")
-        self.shapesize(stretch_wid=5, stretch_len=1)
         self.penup()
-        self.goto(position)
+        self.shape("turtle")
         self.setheading(90)
+        self.goto(0, -280)
 
-    def right_shift(self):
-        new_x = self.xcor() + 40
-        self.goto(new_x, self.ycor())
+    def move(self):
+        self.forward(15)
 
-    def left_shift(self):
-        new_x = self.xcor() -40
-        self.goto(new_x, self.ycor())
-
+    def reset_player(self):
+        self.goto(0, -280)
