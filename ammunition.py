@@ -4,8 +4,8 @@ from turtle import Turtle
 class Ammunition(Turtle):
     def __init__(self, x, y):
         super().__init__()
-        self.color("white")
-        self.shape("circle")
+        # self.color("white")
+        self.shape("bullet.gif")
         self.penup()
         self.goto(x, y)
         self.y_move = 17

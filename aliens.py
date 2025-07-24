@@ -10,7 +10,7 @@ class Alien(Turtle):
         self.shape(random.choice(alien_shapes))
         self.penup()
         self.setheading(270)
-        self.goto(random.randint(-250, 250), random.randint(150, 350))
+        self.goto(random.randint(-300, 300), random.randint(250, 700))
 
     def move(self):
         self.forward(random.randint(0, 5))

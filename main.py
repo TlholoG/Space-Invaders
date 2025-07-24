@@ -9,7 +9,9 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
 screen.bgcolor('black')
+
 screen.addshape("spaceship.gif")
+screen.addshape("bullet.gif")
 alien_gifs = ["alien1.gif", "alien2.gif", "alien3.gif", "alien4.gif", "alien5.gif", "alien6.gif"]
 for gif in alien_gifs:
     screen.addshape(gif)
@@ -17,7 +19,7 @@ for gif in alien_gifs:
 spaceship = Spaceship()
 scoreboard = ScoreBoard()
 alien_list = [Alien() for _ in range(30)]
-ammo = AmmoManager()
+ammo = AmmoManager(scoreboard)
 
 
 def fire_bullet():
