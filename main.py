@@ -17,9 +17,11 @@ for _ in range(30):
     alien_list.append(Alien())
 
 screen.listen()
-screen.onkey(spaceship.move, "Up")
+screen.onkey(spaceship.move_forward, "Up")
+screen.onkey(spaceship.move_back, "Down")
 screen.onkey(spaceship.left_shift, "Left")
 screen.onkey(spaceship.right_shift, "Right")
+screen.onkey(spaceship.fire, "space")
 
 game_is_on = True
 while game_is_on:

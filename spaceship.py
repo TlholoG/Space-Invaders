@@ -9,6 +9,8 @@ class Spaceship(Turtle):
         self.shape("turtle")
         self.setheading(90)
         self.goto(0, -280)
+        # x, y = self.position()
+        # self.bullet = Ammunition(x, y)
 
     def move_forward(self):
         self.forward(15)
@@ -30,4 +32,4 @@ class Spaceship(Turtle):
     def fire(self):
         x, y = self.position()
         bullet = Ammunition(x, y)
-        bullet.move_bullet()
+        # self.bullet.move_bullet()

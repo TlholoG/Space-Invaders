@@ -13,6 +13,5 @@ class Alien(Turtle):
         self.goto(random.randint(-250, 250), random.randint(150, 350))
 
     def move(self):
-        # if self.ycor() < 300:
-        #     self.goto(300, random.randint(-250, 250))
-        self.forward(random.randint(1, 3))
+        self.forward(random.randint(0, 5))
+
