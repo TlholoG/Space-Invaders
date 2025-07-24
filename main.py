@@ -8,24 +8,27 @@ import random
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
+screen.bgcolor('black')
 
 spaceship = Spaceship()
 scoreboard = ScoreBoard()
 alien_list = []
-for _ in range(15):
+for _ in range(30):
     alien_list.append(Alien())
 
 screen.listen()
-screen.onkey(spaceship .move, "Up")
+screen.onkey(spaceship.move, "Up")
+screen.onkey(spaceship.left_shift, "Left")
+screen.onkey(spaceship.right_shift, "Right")
 
 game_is_on = True
 while game_is_on:
     time.sleep(scoreboard.level_speed)
     screen.update()
 
-    for vehicle in alien_list:
-        vehicle.move()
-        if vehicle.distance(spaceship) < 30:
+    for alien in alien_list:
+        alien.move()
+        if alien.distance(spaceship) < 30:
             scoreboard.game_over()
             game_is_on = False
 
