@@ -8,7 +8,7 @@ import time
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.tracer(0)
-screen.bgcolor('black')
+screen.bgpic("Galaxy.gif")
 
 screen.addshape("spaceship.gif")
 screen.addshape("bullet.gif")

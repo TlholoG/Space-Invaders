@@ -22,7 +22,6 @@ class AmmoManager:
         for bullet in self.bullets[:]:
             for alien in aliens[:]:
                 if bullet.distance(alien) < 40:
-                    print(alien.shape())
                     bullet.hideturtle()
                     alien.hideturtle()
                     self.bullets.remove(bullet)
