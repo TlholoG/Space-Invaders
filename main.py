@@ -7,6 +7,7 @@ import time
 
 screen = Screen()
 screen.setup(width=600, height=600)
+screen.cv._rootwindow.resizable(False,False)
 screen.tracer(0)
 screen.bgpic("Galaxy.gif")
 
