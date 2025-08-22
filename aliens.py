@@ -14,4 +14,3 @@ class Alien(Turtle):
 
     def move(self):
         self.forward(random.randint(0, 5))
-

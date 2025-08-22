@@ -20,4 +20,3 @@ class Ammunition(Turtle):
         else:
             self.hideturtle()
             self.clear()
-
